@@ -6,7 +6,6 @@ html {
   display: flex;
   justify-content: space-between;
   padding: 40px 168px 0 168px;
-  height: 28px;
 }
 
 .header__social-list {
@@ -19,35 +18,38 @@ html {
 .hero__text {
   display: flex;
   justify-content: space-between;
-  padding: 88px 168px 88px 168px;
+  margin-left: 168px;
+  margin-top: 58px;
+  width: 944px;
 }
 
 .hero__group {
-  display: flex;
-  justify-self: center;
-  align-items: center;
+  margin-top: 36px;
+  margin-bottom: 36px;
   width: 464px;
   height: 311px;
-  /* gap: 96px; */
 }
 
 .about_hero {
-  height: 209px;
+  /* padding-top: 36px; */
+  /* height: 209px; */
+}
+
+.header__logo {
+  height: 28px;
 }
 
 .hero__type {
-  width: 464px;
-  height: 28px;
   line-height: 28px;
   color: #ffbb01;
   font-size: 24px;
-  margin-top: -12px;
+  margin-bottom: 12px;
 }
 
 .hero__name {
-  font-size: 50px;
+  font-size: 51px;
   line-height: 59px;
-  margin: 10px 0 20px 0;
+  margin-bottom: 24px;
 }
 
 .hero__text-text {
@@ -56,13 +58,10 @@ html {
   line-height: 28px;
 }
 
-.hero__button {
-  width: 300px;
-  height: 66px;
+.button {
   border-radius: 6px;
   border: none;
   background-color: #ffbb01;
-  margin-top: 42px;
   text-transform: uppercase;
   box-shadow: 0px 4px 0px 0px #b68500;
   font-family: Roboto;
@@ -74,6 +73,12 @@ html {
   text-decoration-skip-ink: none;
 }
 
+.hero__button {
+  width: 300px;
+  height: 66px;
+  margin-top: 42px;
+}
+
 .avatar {
   width: 384px;
   height: 384px;
@@ -83,6 +88,7 @@ html {
 .features {
   background: #141f35;
   height: 720px;
+  margin-top: 88px;
   padding: 0 168px 88px 168px;
   top: 628px;
   gap: 48px;
@@ -112,7 +118,7 @@ html {
 
 .features__card {
   max-width: 304px;
-  height: 200px;
+  min-height: 200px;
 }
 
 .features__img {
@@ -135,11 +141,11 @@ html {
 }
 
 .portfolio {
-  height: 570px;
+  min-height: 570px;
 }
 
 .portfolio__content {
-  padding: 88px 0 48px 168px;
+  padding: 88px 0 88px 168px;
 }
 
 .portfolio__title {
@@ -149,13 +155,13 @@ html {
 }
 
 .portfolio__cards {
-  padding: 48px 0 0 0;
+  padding-top: 48px;
 }
 
 .portfolio__cards-list {
-  display: flex;
-  flex-direction: row;
-  height: 304px;
+  display: grid;
+  grid-template-columns: repeat(3, 304px);
+  min-height: 304px;
   gap: 16px;
   list-style: none;
 }
@@ -166,11 +172,9 @@ html {
 
 .portfolio__cards-text {
   position: absolute;
-  top: 164px;
   z-index: 2;
   inset: 164px 0 0 33px;
   width: 179px;
-  height: 56px;
   font-size: 18px;
   font-weight: 700;
   line-height: 28px;
@@ -198,16 +202,16 @@ html {
 
 .gallary {
   background: #141f35;
-  height: 881px;
+  min-height: 881px;
 }
 
 .gallary__content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   justify-content: space-around;
   gap: 16px 16px;
-  padding: 88px 168px 48px 168px;
+  padding: 88px 168px 88px 168px;
 }
 
 .gallary__content-img {
@@ -218,13 +222,14 @@ html {
 }
 
 .contacs {
-  padding: 88px 168px 48px 168px;
+  padding: 88px 168px 88px 168px;
 }
 
 .contacs__content {
   display: flex;
   justify-content: space-between;
-  padding: 47px 0 0 0;
+  margin-top: 47px;
+  gap: 96px;
 }
 
 .contacs__title {
@@ -237,14 +242,15 @@ html {
 
 .contacs__content-form {
   position: relative;
-  width: 464px;
-  height: 422px;
+  /* width: 464px; */
+  min-height: 422px;
   background: #ffffff;
   box-shadow: -5px 5px 0px 0px #ffc41d;
   border: none;
 }
 
 .contacs__content-contact {
+  /* width: 384px; */
 }
 
 .contacs__content-text {
@@ -261,29 +267,19 @@ html {
 }
 
 .contacs__content-button {
-  position: absolute;
-  inset: 274px 32px 0 33px;
+  position: sticky;
+  /* inset: 274px 32px 0 33px; */
   width: 400px;
   height: 66px;
-  border-radius: 6px;
-  border: none;
-  background-color: #ffbb01;
-  margin-top: 42px;
-  text-transform: uppercase;
-  box-shadow: 0px 4px 0px 0px #b68500;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 15.6px;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+  margin-left: 32px;
+  margin-bottom: 42px;
 }
 
 .form {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 32px 32px 20px 32px;
+  padding: 32px 32px 32px 32px;
 }
 
 .contacs__input {
@@ -312,16 +308,21 @@ html {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   justify-content: space-around;
-  gap: 34px 96px;
+  gap: 32px 96px;
+  min-width: 384px;
 }
 
 .contacs__content-items {
   list-style: none;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .contacs__content-title {
-  width: 144px;
-  height: 46px;
+  /* width: 144px; */
+  /* height: 46px; */
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
@@ -338,7 +339,7 @@ html {
 
 .politic {
   display: block;
-  padding: 231px 0 0 0;
+  margin-top: 231px;
   font-size: 15px;
   line-height: 17.58px;
   text-decoration-line: underline;
